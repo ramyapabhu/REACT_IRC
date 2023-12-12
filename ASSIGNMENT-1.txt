@@ -1,0 +1,106 @@
+
+1.WRITE A JAVASCRIPT FUNCTION USING ARRAY?
+
+CODING:
+
+function calculateSum(numbers) {
+  
+  if (!Array.isArray(numbers)) {
+    throw new Error('Input is not an array');
+  }
+
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+  return sum;
+}
+
+const numbersArray = [1, 2, 3, 4, 5];
+const result = calculateSum(numbersArray);
+console.log(result); 
+
+EXPLANATION:
+
+The calculateSum function takes an array (numbers) as its parameter.
+It checks if the input is indeed an array using Array.isArray.
+It uses the reduce function to iterate over the array, accumulating the sum of elements in the acc variable.
+The initial value of the accumulator is set to 0.
+The final sum is returned.
+
+
+2.WRITE A JAVASCRIPT PROGRAM FOR A DECREASING ORDER USING FOR LOOP?
+
+CODING:
+
+function printDecreasingOrder(limit) {
+  
+  if (!Number.isInteger(limit) || limit <= 0) {
+    throw new Error('Input should be a positive integer');
+  }
+
+  for (let i = limit; i >= 1; i--) {
+    console.log(i);
+  }
+}
+
+printDecreasingOrder(5);
+
+EXPLANATION:
+
+The printDecreasingOrder function takes a parameter limit, which represents the starting point for the decreasing order.
+It checks if the input is a positive integer using Number.isInteger and limit <= 0.
+The for loop starts from the limit and decrements i by 1 in each iteration until i is greater than or equal to 1.
+The console.log(i) statement prints the current value of i in each iteration.
+
+
+3.WRITE A JAVASCRIPT PROGRAM TO CALCULATE A AREA OF A SQUARE?
+
+CODING:
+
+function calculateSquareArea(sideLength) {
+  
+  if (typeof sideLength !== 'number' || sideLength <= 0) {
+    throw new Error('Side length should be a positive number');
+  }
+
+  const area = sideLength * sideLength;
+
+  return area;
+}
+
+const sideLength = 5;
+const squareArea = calculateSquareArea(sideLength);
+
+console.log(`The area of the square with side length ${sideLength} is: ${squareArea}`);
+
+EXPLANATION:
+
+The calculateSquareArea function takes a parameter sideLength, which represents the length of one side of the square.
+It checks if the input is a positive number using typeof sideLength !== 'number' || sideLength <= 0.
+The area of the square is calculated by multiplying the side length by itself (sideLength * sideLength).
+The calculated area is then returned by the function.
+
+
+4.WRITE A JAVASCRIPT FUNCTION TO CHECK WHETHER THE GIVEN INPUT IS A STRING?
+
+CODING:
+
+function isString(input) {
+  return typeof input === 'string' || input instanceof String;
+}
+
+const userInput = "Hello, World!";
+const isInputString = isString(userInput);
+
+if (isInputString) {
+  console.log("The input is a string.");
+} else {
+  console.log("The input is not a string.");
+}
+
+EXPLANATION:
+
+The is String function takes a parameter input.
+The function checks whether the typeof input is equal to 'string', which covers primitive string values, and/or if input is an instance               of the String object.
+The function returns true if the input is a string and false otherwise.
+
+
